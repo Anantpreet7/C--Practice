@@ -2,7 +2,7 @@
 #include<ctime>
 char getUserChoice();
 char getComputerChoice();
-void showchoice(char choice);
+void showcase(char choice);
 void choosewinner(char player, char computer);
 
 int main() {
@@ -29,5 +29,43 @@ char getComputerChoice() {
         case 1 : return 'r' ;
         case 2 : return 'p' ;
         case 3 : return 's' ;
+    }
+}
+
+void showcase(char choice) {
+    switch(choice){
+        case 'r' : std::cout<<"Rock";
+        case 'p' : std::cout<<"Paper";
+        case 's' : std::cout<<"Scissor";
+    }
+}
+
+void choosewinner(char player, char computer){
+    switch(player){
+        case 'r' : if(computer == 'r'){
+            std::cout<<"It is a tie";
+        } else if (computer == 'p') {
+            std::cout<<"You lose";
+        }else {
+            std::cout<<"You win ";
+        } 
+        break;
+
+        case 'p' : if(computer == 'p'){
+            std::cout<<"It is a tie";
+        } else if (computer == 's') {
+            std::cout<<"You lose";
+        }else {
+            std::cout<<"You win ";
+        } break;
+
+        case 's' : if(computer == 's'){
+            std::cout<<"It is a tie";
+        } else if (computer == 'r') {
+            std::cout<<"You lose";
+        }else {
+            std::cout<<"You win ";
+        } break;
+
     }
 }
