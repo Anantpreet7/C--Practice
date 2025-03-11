@@ -26,7 +26,6 @@ char getUserChoice(){
         std::cout<<" Choose p for Paper \n";
         std::cout<<" Choose s for Scissor \n";
         std::cin>>player;
-        std::cout<<player;
 }while(player != 'r' && player != 's' && player != 'p') ;
 return player ;
 }
