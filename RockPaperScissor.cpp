@@ -6,7 +6,16 @@ void showcase(char choice);
 void choosewinner(char player, char computer);
 
 int main() {
-    return 0;
+    char player ;
+    char Computer ;
+    player = getUserChoice();
+    std::cout<<"Your choice is \n ";
+    showcase(player) ;
+
+    Computer = getComputerChoice();
+    std::cout<<"The computer's Choice is : \n" ;
+    showcase(Computer) ;
+    choosewinner(player, Computer) ;
 }
 
 char getUserChoice(){
@@ -34,9 +43,12 @@ char getComputerChoice() {
 
 void showcase(char choice) {
     switch(choice){
-        case 'r' : std::cout<<"Rock";
-        case 'p' : std::cout<<"Paper";
-        case 's' : std::cout<<"Scissor";
+        case 'r' : std::cout<<"Rock"<<std::endl;
+        break;
+        case 'p' : std::cout<<"Paper"<<std::endl;
+        break;
+        case 's' : std::cout<<"Scissor"<<std::endl;
+        break;
     }
 }
 
